@@ -1,0 +1,29 @@
+Gameboard encoding:
+	0 = Black team
+	1 = White Team
+		
+
+GameDBJson:
+	"Winner": "White" or "Black"	
+
+Tensorinput Encoding:
+	if JSON's winner:Black:
+		label = 1 # Black win
+	else:
+		label = -1 # White win
+
+ONE-HOT encoding:
+	if label = -1:
+		[1,0] = White win
+	else:	
+		[0,1] = Black win
+		
+
+	[[1 0]
+ 	 [1 0]
+ 	 [0 1]
+ 	 ..., 
+ 	 [0 1]
+ 	 [1 0]
+ 	 [1 0]]
+	
